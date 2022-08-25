@@ -304,6 +304,6 @@ index.run();
 ## 获取类型
 TS 中的 reflect-metadata 是经过扩展，额外给我们添加 3 个类型相关的元数据。之所以会有，这是因为我们在 TS 中开启了 emitDecoratorMetadata编译选项，这样 TS 在编译的时候会将类型元数据自动添加上去。这也是 TS 强类型编程带来的额外好处.
 
-design:type	被装饰的对象是什么类型, 比如是字符串? 数字? 还是函数
-design:paramtypes	被装饰对象的参数类型, 是一个表示类型的数组, 如果不是函数, 则没有该 key
-design:returntype	表示被装饰对象的返回值属性, 比如字符串,数字或函数等
+- design:type	被装饰的对象是什么类型, 比如是字符串? 数字? 还是函数
+- design:paramtypes	被装饰对象的参数类型, 是一个表示类型的数组, 如果不是函数, 则没有该 key
+- design:returntype	表示被装饰对象的返回值属性, 比如字符串,数字或函数等
