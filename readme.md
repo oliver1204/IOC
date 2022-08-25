@@ -291,3 +291,6 @@ index.run();
     }
 }
 ```
+
+其他文档:
+[有趣的装饰器：使用 Reflect Metadata 实践依赖注入](https://zhuanlan.zhihu.com/p/87511653)
