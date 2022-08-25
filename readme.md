@@ -1,3 +1,11 @@
+
+其他文档:
+
+* [有趣的装饰器：使用 Reflect Metadata 实践依赖注入](https://zhuanlan.zhihu.com/p/87511653)
+* [es7之Reflect Metadata](https://blog.csdn.net/zhangjing0320/article/details/121858916) // 基本概念
+* [控制反转和依赖注入的理解(通俗易懂)](https://blog.csdn.net/sinat_21843047/article/details/80297951) // 基本概念
+
+
 TypeScript中的装饰器的本质是什么？简单来说，是函数。它具体做了什么工作？简单来说，它“装饰”了类、方法、访问器、属性和参数——“它”是指类装饰器、方法装饰器、访问器装饰器、属性装饰器和参数装饰器。那么，装饰到底意味着什么呢？以类装饰器为例，看看它是怎样装饰类的。首先，假设我们需要实现一个添加商品到购物车的功能。为此我们需要一个维护商品库存的商品服务类WareService： // 商品服务类
 ```js
 class WareService {
@@ -292,5 +300,10 @@ index.run();
 }
 ```
 
-其他文档:
-[有趣的装饰器：使用 Reflect Metadata 实践依赖注入](https://zhuanlan.zhihu.com/p/87511653)
+
+## 获取类型
+TS 中的 reflect-metadata 是经过扩展，额外给我们添加 3 个类型相关的元数据。之所以会有，这是因为我们在 TS 中开启了 emitDecoratorMetadata编译选项，这样 TS 在编译的时候会将类型元数据自动添加上去。这也是 TS 强类型编程带来的额外好处.
+
+design:type	被装饰的对象是什么类型, 比如是字符串? 数字? 还是函数
+design:paramtypes	被装饰对象的参数类型, 是一个表示类型的数组, 如果不是函数, 则没有该 key
+design:returntype	表示被装饰对象的返回值属性, 比如字符串,数字或函数等
